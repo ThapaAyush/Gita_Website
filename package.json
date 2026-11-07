@@ -1,6 +1,7 @@
 {
   "name": "gita-website",
   "version": "1.0.0",
+  "homepage": "https://gita-flax.vercel.app/",
   "description": "Official Landing Page and APK Distribution Server for Bhagavad Gita As It Is",
   "main": "server.js",
   "scripts": {

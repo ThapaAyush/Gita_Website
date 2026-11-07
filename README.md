@@ -1,6 +1,10 @@
 # Bhagavad Gita As It Is — Official Website & APK Distribution Server
 
-A responsive, authentic landing page and high-performance APK distribution backend for the **Bhagavad Gita As It Is** Android application.
+A responsive, authentic landing page and high-performance distribution server for the **Bhagavad Gita As It Is** application.
+
+- **🌐 Live Production Website**: **[https://gita-flax.vercel.app/](https://gita-flax.vercel.app/)**
+- **📱 Direct Android APK**: [https://gita-flax.vercel.app/download/android](https://gita-flax.vercel.app/download/android)
+- **🍎 Direct iOS Package**: [https://gita-flax.vercel.app/download/ios](https://gita-flax.vercel.app/download/ios)
 
 ---
 

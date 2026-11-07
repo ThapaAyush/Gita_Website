@@ -424,9 +424,14 @@ async function fetchPackageMetadata() {
 /* -------------------------------------------------------------------------
    5. Dual QR Code Generators (Android & iOS)
    ------------------------------------------------------------------------- */
+const PRODUCTION_SITE_URL = 'https://gita-flax.vercel.app';
+
 function generateDualQrCodes() {
-  setupQrCode('android-qr-mount', `${window.location.origin}/download/android`, 'Scan for Android APK');
-  setupQrCode('ios-qr-mount', `${window.location.origin}/download/ios`, 'Scan for iOS Package');
+  const isLocal = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1';
+  const baseUrl = isLocal ? PRODUCTION_SITE_URL : (window.location.origin || PRODUCTION_SITE_URL);
+
+  setupQrCode('android-qr-mount', `${baseUrl}/download/android`, 'Scan for Android APK');
+  setupQrCode('ios-qr-mount', `${baseUrl}/download/ios`, 'Scan for iOS Package');
 }
 
 function setupQrCode(mountId, targetUrl, altText) {
