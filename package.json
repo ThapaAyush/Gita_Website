@@ -1,0 +1,21 @@
+{
+  "name": "gita-website",
+  "version": "1.0.0",
+  "description": "Official Landing Page and APK Distribution Server for Bhagavad Gita As It Is",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node --watch server.js"
+  },
+  "keywords": [
+    "bhagavad-gita",
+    "apk-download",
+    "landing-page",
+    "iskcon",
+    "prabhupada"
+  ],
+  "author": "Bhagavad Gita As It Is",
+  "license": "MIT",
+  "dependencies": {}
+}
+

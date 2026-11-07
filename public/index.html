@@ -1,0 +1,592 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="color-scheme" content="light dark">
+  <title>Bhagavad Gita As It Is — Official Android &amp; iOS App</title>
+  <meta name="description" content="Download Bhagavad Gita As It Is for Android and iOS. 700 Slokas with original Sanskrit Devanagari, English synonyms, translations & BBT purports. 100% Offline & Ad-free.">
+  <link rel="icon" type="image/png" href="images/app_logo.png?v=4">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Bhagavad Gita As It Is">
+  <meta property="og:description" content="Complete 18 Chapters & 700 Slokas with original Sanskrit, English synonyms, translations & purports. 100% Offline.">
+  <meta property="og:image" content="images/screen_reader.png">
+  <meta property="og:type" content="website">
+
+  <!-- Google Fonts: Cinzel & Outfit for sacred editorial typography -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800&family=Outfit:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600&display=swap" rel="stylesheet">
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="css/style.css?v=8">
+</head>
+<body>
+
+  <!-- Top Navigation Header -->
+  <header class="site-nav">
+    <div class="container nav-inner">
+      <a href="#" class="brand-link">
+        <img src="images/app_logo.png?v=4" alt="Bhagavad Gita Logo" class="brand-logo-img" width="40" height="40" fetchpriority="high">
+        <div class="brand-text">
+          <span class="brand-title">Bhagavad Gita As It Is</span>
+        </div>
+      </a>
+
+      <nav>
+        <ul class="nav-links">
+          <li><a href="#experience">App Experience</a></li>
+          <li><a href="#features">Features</a></li>
+          <li><a href="#download">Download</a></li>
+          <li><a href="#faq">FAQ</a></li>
+          <li><a href="#dedication">Dedication</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-actions">
+        <button id="theme-toggle-btn" class="theme-toggle-btn" aria-label="Toggle Theme" title="Toggle Theme">🌙</button>
+        <div class="nav-download-group" role="group" aria-label="Download App Packages">
+          <a href="/download/android" class="nav-btn nav-btn-android" onclick="window.trackDownload('android')" title="Download Android APK (Direct Install)">
+            <svg class="nav-btn-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+              <path d="M17.523 15.3414c-.5511 0-.9993-.4486-.9993-.9997s.4482-.9993.9993-.9993c.551 0 .9993.4482.9993.9993.0001.5511-.4483.9997-.9993.9997m-11.046 0c-.5511 0-.9993-.4486-.9993-.9997s.4482-.9993.9993-.9993c.5511 0 .9993.4482.9993.9993 0 .5511-.4482.9997-.9993.9997m11.4045-6.02l1.9973-3.4592a.416.416 0 00-.1521-.5676.416.416 0 00-.5676.1521l-2.0223 3.503C15.5902 8.4116 13.8533 8.125 12 8.125s-3.5902.2866-5.1368.8247L4.8409 5.4467a.4161.4161 0 00-.5677-.1521.4157.4157 0 00-.1521.5676l1.9973 3.4592C2.6889 11.1867.3432 14.6589 0 18.761h24c-.3432-4.1021-2.6889-7.5743-6.1185-9.4396"/>
+            </svg>
+            <span class="nav-btn-label">Android <span class="nav-btn-sub">APK</span></span>
+          </a>
+
+          <a href="/download/ios" class="nav-btn nav-btn-ios" onclick="window.trackDownload('ios')" title="Download iOS Package (IPA / Web)">
+            <svg class="nav-btn-icon" viewBox="0 0 170 170" fill="currentColor" aria-hidden="true">
+              <path d="M150.37 130.25c-2.45 5.66-5.35 10.87-8.71 15.66-4.58 6.53-8.33 11.05-11.22 13.56-4.48 4.12-9.28 6.23-14.42 6.35-3.69 0-8.14-1.05-13.32-3.18-5.19-2.12-9.97-3.17-14.34-3.17-4.58 0-9.49 1.05-14.75 3.17-5.26 2.13-9.5 3.24-12.74 3.35-4.35.13-9.16-1.9-14.42-6.08-3.7-3.04-7.58-7.71-11.65-14-6.42-9.9-11.35-21.11-14.79-33.62-3.43-12.51-5.15-24.3-5.15-35.37 0-14.07 3.51-26.04 10.53-35.91 7.02-9.87 16.14-14.92 27.36-15.15 4.9 0 10.36 1.34 16.39 4.02 6.03 2.68 10.15 4.12 12.36 4.33 1.95-.33 6.32-1.9 13.11-4.73 6.79-2.82 12.63-4.12 17.51-3.9 13.06.66 23.49 5.34 31.29 14.04-11.33 6.87-16.89 16.57-16.68 29.11.22 10.13 4.14 18.57 11.77 25.32 7.63 6.75 16.7 10.45 27.21 11.1-2.4 7.18-5.6 14.44-9.6 21.78zm-29.89-116.71c0 7.18-2.61 14.04-7.83 20.57-6.31 7.85-14.24 12.42-23.79 13.72-.22-1.09-.33-2.18-.33-3.27 0-6.97 2.83-13.94 8.49-20.91 2.83-3.48 6.42-6.53 10.78-9.14 4.35-2.61 8.59-4.03 12.72-4.25-.04 1.09-.04 2.18-.04 3.28z"/>
+            </svg>
+            <span class="nav-btn-label">iOS <span class="nav-btn-sub">Package</span></span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero-section">
+    <div class="container">
+      <div class="hero-content hero-centered">
+        
+        <div class="hero-eyebrow">
+          <span>☸ THE ETERNAL SONG OF THE DIVINE • 100% OFFLINE</span>
+        </div>
+
+        <h1 class="hero-title">
+          Bhagavad Gita <span class="highlight">As It Is</span>
+        </h1>
+
+        <p class="hero-author">
+          By His Divine Grace A.C. Bhaktivedanta Swami Srila Prabhupada
+        </p>
+
+        <p class="hero-description">
+          Experience the timeless wisdom spoken by Lord Sri Krishna on the sacred field of Kurukshetra. 
+          Complete with all 18 chapters and 700 canonical slokas, original Sanskrit Devanagari script, Roman transliterations, 
+          word-for-word synonyms, and the complete, authorized 1972 purports — crafted for pure, daily devotional study without ads or subscriptions.
+        </p>
+
+        <!-- Sacred Highlight Badges -->
+        <div class="hero-badges-row">
+          <div class="hero-badge-pill">
+            <span class="badge-icon">📜</span>
+            <span>18 Chapters &amp; 700 Slokas</span>
+          </div>
+          <div class="hero-badge-pill">
+            <span class="badge-icon">🕉</span>
+            <span>Devanagari Sanskrit</span>
+          </div>
+          <div class="hero-badge-pill">
+            <span class="badge-icon">📖</span>
+            <span>Word-by-Word Synonyms</span>
+          </div>
+          <div class="hero-badge-pill">
+            <span class="badge-icon">✨</span>
+            <span>Authorized BBT Purports</span>
+          </div>
+          <div class="hero-badge-pill">
+            <span class="badge-icon">📶</span>
+            <span>100% Offline SQLite</span>
+          </div>
+        </div>
+
+        <!-- Dual Platform Download Buttons -->
+        <div class="hero-cta-box">
+          <div class="cta-buttons dual-download-row">
+            <a href="/download/android" class="btn btn-primary btn-lg download-apk-btn" onclick="window.trackDownload('android')">
+              <div class="download-main-text">
+                <span>🤖 Android APK</span>
+              </div>
+              <div class="download-meta-text">
+                v1.0.0 • <span class="dynamic-android-size">52 MB</span> • Direct Install
+              </div>
+            </a>
+
+            <a href="/download/ios" class="btn btn-secondary btn-lg download-apk-btn ios-btn" onclick="window.trackDownload('ios')">
+              <div class="download-main-text">
+                <span>🍎 iOS Package</span>
+              </div>
+              <div class="download-meta-text">
+                v1.0.0 • <span class="dynamic-ios-size">671 KB</span> • IPA / Web
+              </div>
+            </a>
+          </div>
+
+          <div class="hero-apk-safe-note">
+            <span class="safe-shield">✓</span>
+            <span>Official Packages • Ad-free &amp; 100% offline study companion</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Sacred Divider -->
+  <div class="container">
+    <div class="sacred-divider">
+      <span class="sacred-symbols">◈ <span class="lotus">☸</span> ◈</span>
+    </div>
+  </div>
+
+  <!-- App Experience Showcase (5 Authentic App Screens) -->
+  <section id="experience" class="experience-section">
+    <div class="container">
+      
+      <div class="section-header">
+        <span class="section-tag">Inside the Application</span>
+        <h2 class="section-title">Experience the Divine Teachings</h2>
+        <p class="section-subtitle">
+          Designed with palm-leaf parchment aesthetics, distraction-free clarity, and authentic BBT authorized scripture presentation.
+        </p>
+      </div>
+
+      <!-- Interactive Screen Switcher Tabs -->
+      <div class="screen-tabs-bar" role="tablist">
+        <button class="screen-tab-btn active" data-screen="reader" role="tab">
+          <span class="tab-icon">📖</span>
+          <span class="tab-label">Verse Reader</span>
+        </button>
+        <button class="screen-tab-btn" data-screen="home" role="tab">
+          <span class="tab-icon">📜</span>
+          <span class="tab-label">18 Chapters</span>
+        </button>
+        <button class="screen-tab-btn" data-screen="settings" role="tab">
+          <span class="tab-icon">⚙️</span>
+          <span class="tab-label">Themes &amp; Fonts</span>
+        </button>
+        <button class="screen-tab-btn" data-screen="about" role="tab">
+          <span class="tab-icon">🙏</span>
+          <span class="tab-label">About &amp; Lineage</span>
+        </button>
+        <button class="screen-tab-btn" data-screen="search" role="tab">
+          <span class="tab-icon">🔍</span>
+          <span class="tab-label">Smart Search</span>
+        </button>
+      </div>
+
+      <!-- Main Spotlight Showcase -->
+      <div class="spotlight-showcase">
+        
+        <!-- Left: Realistic Device Mockup Frame -->
+        <div class="device-mockup-wrapper">
+          <div class="device-mockup-frame">
+            <div class="device-top-notch"></div>
+            <img id="spotlight-image" src="images/screen_reader.png?v=5" alt="Sacred Verse Reader Screen" class="device-screen-img" width="407" height="853">
+          </div>
+        </div>
+
+        <!-- Right: Screen Deep-Dive Editorial Card -->
+        <div class="spotlight-details-card" id="spotlight-details">
+          <div class="spotlight-badge" id="spotlight-badge">SCREEN 01 • SACRED IMMERSION</div>
+          <h3 class="spotlight-title" id="spotlight-title">Verse Reader Experience</h3>
+          <p class="spotlight-desc" id="spotlight-desc">
+            Immerse yourself in original Sanskrit Devanagari script, Roman diacritical transliterations, word-for-word synonyms, 
+            and the complete 1972 purports by Srila Prabhupada. Navigate effortlessly with bottom quick-action controls.
+          </p>
+
+          <div class="spotlight-feature-bullets" id="spotlight-bullets">
+            <div class="bullet-item">
+              <span class="bullet-check">✓</span>
+              <span>Devanagari script with Roman pronunciation guide</span>
+            </div>
+            <div class="bullet-item">
+              <span class="bullet-check">✓</span>
+              <span>Complete grammatical word-by-word synonyms</span>
+            </div>
+            <div class="bullet-item">
+              <span class="bullet-check">✓</span>
+              <span>Full, authorized Bhaktivedanta purports</span>
+            </div>
+            <div class="bullet-item">
+              <span class="bullet-check">✓</span>
+              <span>Quick chapter &amp; verse picker at your fingertips</span>
+            </div>
+          </div>
+
+          <div class="spotlight-actions">
+            <a href="#download" class="btn btn-primary">
+              <span>📥 Install This App</span>
+            </a>
+            <div class="spotlight-nav-arrows">
+              <button class="arrow-btn" id="spotlight-prev" aria-label="Previous Screen">‹</button>
+              <button class="arrow-btn" id="spotlight-next" aria-label="Next Screen">›</button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- 5-Card Thumbnail Deck Grid -->
+      <div class="screens-deck-grid">
+        
+        <div class="deck-card active" data-screen="reader">
+          <div class="deck-card-thumb">
+            <img src="images/screen_reader.png?v=5" alt="Verse Reader Thumbnail" loading="lazy">
+          </div>
+          <div class="deck-card-info">
+            <span class="deck-num">01</span>
+            <span class="deck-name">Verse Reader</span>
+          </div>
+        </div>
+
+        <div class="deck-card" data-screen="home">
+          <div class="deck-card-thumb">
+            <img src="images/screen_home.png?v=5" alt="18 Chapters Hub Thumbnail" loading="lazy">
+          </div>
+          <div class="deck-card-info">
+            <span class="deck-num">02</span>
+            <span class="deck-name">18 Chapters</span>
+          </div>
+        </div>
+
+        <div class="deck-card" data-screen="settings">
+          <div class="deck-card-thumb">
+            <img src="images/screen_settings.png?v=5" alt="Settings & Themes Thumbnail" loading="lazy">
+          </div>
+          <div class="deck-card-info">
+            <span class="deck-num">03</span>
+            <span class="deck-name">Themes &amp; Fonts</span>
+          </div>
+        </div>
+
+        <div class="deck-card" data-screen="about">
+          <div class="deck-card-thumb">
+            <img src="images/screen_about.png?v=5" alt="About & Lineage Thumbnail" loading="lazy">
+          </div>
+          <div class="deck-card-info">
+            <span class="deck-num">04</span>
+            <span class="deck-name">About &amp; Lineage</span>
+          </div>
+        </div>
+
+        <div class="deck-card" data-screen="search">
+          <div class="deck-card-thumb">
+            <img src="images/screen_search.png?v=5" alt="Smart Search Thumbnail" loading="lazy">
+          </div>
+          <div class="deck-card-info">
+            <span class="deck-num">05</span>
+            <span class="deck-name">Smart Search</span>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Sacred Divider -->
+  <div class="container">
+    <div class="sacred-divider">
+      <span class="sacred-symbols">◈ <span class="lotus">☸</span> ◈</span>
+    </div>
+  </div>
+
+  <!-- Detailed Features Section -->
+  <section id="features" class="features-section">
+    <div class="container">
+      
+      <div class="section-header">
+        <span class="section-tag">Engineered for Devotees</span>
+        <h2 class="section-title">Features for Daily Scripture Study</h2>
+        <p class="section-subtitle">Every detail is thoughtfully crafted to support deep concentration, uninterrupted contemplation, and spiritual immersion.</p>
+      </div>
+
+      <div class="features-grid detailed-features">
+        
+        <div class="feature-card">
+          <div class="feature-icon-wrapper">ॐ</div>
+          <h3 class="feature-title">700 Sanskrit Slokas</h3>
+          <p class="feature-desc">
+            Complete Sanskrit slokas rendered in clear Devanagari script, paired with precise Roman diacritical transliteration 
+            for chanting, recitation, and authentic pronunciation.
+          </p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon-wrapper">📖</div>
+          <h3 class="feature-title">Word-by-Word Synonyms</h3>
+          <p class="feature-desc">
+            Detailed word-for-word Sanskrit breakdown for every verse, allowing students to comprehend the exact grammatical 
+            meaning and etymological richness of each sacred word.
+          </p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon-wrapper">✨</div>
+          <h3 class="feature-title">Authorized BBT Purports</h3>
+          <p class="feature-desc">
+            The full, unedited Bhaktivedanta purports offering timeless philosophical clarity and practical Vaishnava teachings 
+            for solving the fundamental problems of life.
+          </p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon-wrapper">🎨</div>
+          <h3 class="feature-title">4 Meditative Backgrounds</h3>
+          <p class="feature-desc">
+            Switch effortlessly between Warm Parchment, Classic Sepia, High-Contrast Paper, and Temple Dark mode. 
+            Adjust font sizing dynamically from 12pt to 28pt.
+          </p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon-wrapper">📶</div>
+          <h3 class="feature-title">100% Offline SQLite Engine</h3>
+          <p class="feature-desc">
+            All 700 verses, synonyms, and extensive purports are preloaded locally into an optimized offline database. 
+            Zero internet connection required and zero data usage.
+          </p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon-wrapper">🔇</div>
+          <h3 class="feature-title">Silent Meditative Sanctuary</h3>
+          <p class="feature-desc">
+            No advertisements, no subscriptions, no paywalls, and no analytics tracking. Your study remains completely private, 
+            reverent, and undisturbed by notifications.
+          </p>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Sacred Divider -->
+  <div class="container">
+    <div class="sacred-divider">
+      <span class="sacred-symbols">◈ <span class="lotus">☸</span> ◈</span>
+    </div>
+  </div>
+
+  <!-- Direct Downloads Section -->
+  <section id="download" class="download-section">
+    <div class="container">
+      
+      <div class="section-header">
+        <span class="section-tag">Install Everywhere</span>
+        <h2 class="section-title">Direct Application Downloads</h2>
+        <p class="section-subtitle">Get the official, stand-alone application packages directly on your Android phone, tablet, or iOS device.</p>
+      </div>
+
+      <div class="dual-platform-grid">
+        
+        <!-- Android Card -->
+        <div class="platform-download-card">
+          <div class="platform-card-header">
+            <div class="platform-icon android">🤖</div>
+            <div>
+              <span class="platform-pill android-pill">Official Android APK</span>
+              <h3 class="platform-title">Android Application</h3>
+            </div>
+          </div>
+
+          <p class="platform-card-summary">
+            Direct release package for all Android smartphones and tablets running Android 8.0 or newer. Completely self-contained with offline database.
+          </p>
+
+          <div class="platform-meta-badge">
+            v1.0.0 • <span class="dynamic-android-size">52 MB</span> • ARM64 &amp; ARMv7 Universal
+          </div>
+
+          <div class="platform-actions">
+            <a href="/download/android" class="btn btn-primary btn-lg full-width" onclick="window.trackDownload('android')">
+              <span>📥 Download Android APK</span>
+            </a>
+          </div>
+
+          <div class="platform-qr-box">
+            <div class="qr-code-mount" id="android-qr-mount"></div>
+            <div class="platform-qr-caption">Scan with your phone to download directly</div>
+          </div>
+        </div>
+
+        <!-- iOS Card -->
+        <div class="platform-download-card">
+          <div class="platform-card-header">
+            <div class="platform-icon ios">🍎</div>
+            <div>
+              <span class="platform-pill ios-pill">Apple iOS Package</span>
+              <h3 class="platform-title">iOS Application</h3>
+            </div>
+          </div>
+
+          <p class="platform-card-summary">
+            Direct iOS bundle package for iPhone and iPad devices running iOS 14.0 or newer. Optimized for Retina displays and system dark mode.
+          </p>
+
+          <div class="platform-meta-badge">
+            v1.0.0 • <span class="dynamic-ios-size">671 KB</span> • iOS Universal Package
+          </div>
+
+          <div class="platform-actions">
+            <a href="/download/ios" class="btn btn-secondary btn-lg full-width ios-cta-btn" onclick="window.trackDownload('ios')">
+              <span>📥 Download iOS Package</span>
+            </a>
+          </div>
+
+          <div class="platform-qr-box">
+            <div class="qr-code-mount" id="ios-qr-mount"></div>
+            <div class="platform-qr-caption">Scan with iPhone/iPad Camera to download</div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Installation Steps -->
+  <section class="install-guide-section">
+    <div class="container">
+      
+      <div class="section-header" style="margin-bottom: 32px;">
+        <span class="section-tag">Quick Setup</span>
+        <h2 class="section-title">3 Steps to Begin Reading</h2>
+        <p class="section-subtitle">Start your daily scripture immersion in less than two minutes.</p>
+      </div>
+
+      <div class="steps-grid">
+        <div class="step-card">
+          <div class="step-number">01</div>
+          <h3 class="step-title">Download</h3>
+          <p class="step-desc">Save the official APK or iOS package directly to your smartphone or tablet from this page.</p>
+        </div>
+        <div class="step-card">
+          <div class="step-number">02</div>
+          <h3 class="step-title">Install</h3>
+          <p class="step-desc">Tap the downloaded file in your browser or Files app and allow installation when prompted.</p>
+        </div>
+        <div class="step-card">
+          <div class="step-number">03</div>
+          <h3 class="step-title">Immerse</h3>
+          <p class="step-desc">Open the application, choose your preferred reading theme, and dive into the eternal teachings offline.</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- FAQ Section -->
+  <section id="faq" class="faq-section">
+    <div class="container">
+      
+      <div class="section-header">
+        <span class="section-tag">Common Inquiries</span>
+        <h2 class="section-title">Frequently Asked Questions</h2>
+        <p class="section-subtitle">Everything you need to know about the application and its distribution.</p>
+      </div>
+
+      <div class="faq-grid">
+        
+        <div class="faq-card">
+          <h3 class="faq-question">Is this app completely free to use?</h3>
+          <p class="faq-answer">
+            Yes, 100% free forever. There are zero subscriptions, zero in-app purchases, and no advertisements. It is built as a pure devotional offering for the benefit of seekers worldwide.
+          </p>
+        </div>
+
+        <div class="faq-card">
+          <h3 class="faq-question">Does the app work without an internet connection?</h3>
+          <p class="faq-answer">
+            Yes. The entire scripture database — including all 18 chapters, 700 Sanskrit slokas, English word-for-word synonyms, translations, and complete purports — is packaged locally inside an SQLite database.
+          </p>
+        </div>
+
+        <div class="faq-card">
+          <h3 class="faq-question">Which edition of the Bhagavad Gita is this?</h3>
+          <p class="faq-answer">
+            This application faithfully presents <em>Bhagavad-gītā As It Is</em> by His Divine Grace A.C. Bhaktivedanta Swami Prabhupada, founder of ISKCON and the Bhaktivedanta Book Trust (BBT).
+          </p>
+        </div>
+
+        <div class="faq-card">
+          <h3 class="faq-question">How do I install the APK on my Android device?</h3>
+          <p class="faq-answer">
+            Download the APK file directly using the button above. When the download finishes, tap the notification or open your Downloads folder, tap the APK, and confirm installation when prompted by Android.
+          </p>
+        </div>
+
+        <div class="faq-card">
+          <h3 class="faq-question">Can I customize the font size and colors?</h3>
+          <p class="faq-answer">
+            Yes. Tap the "TT" icon on the bottom right of the reader screen to open preferences. You can smoothly slide font size from 12pt to 28pt and select between Parchment, Sepia, Paper, or Dark mode.
+          </p>
+        </div>
+
+        <div class="faq-card">
+          <h3 class="faq-question">Is my reading progress saved automatically?</h3>
+          <p class="faq-answer">
+            Yes. The app automatically remembers the exact chapter and verse you last visited. Tapping "Continue" on the home screen returns you instantly to your reading position.
+          </p>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Sacred Dedication Section -->
+  <section id="dedication" class="dedication-section">
+    <div class="container">
+      <div class="dedication-card">
+        <div class="dedication-badge">☸ SACRED DEDICATION ☸</div>
+        <p class="dedication-quote">
+          “This app is dedicated to His Divine Grace A.C. Bhaktivedanta Swami Srila Prabhupada, 
+          who opened the eyes of the world blinded by the darkness of ignorance with the torchlight of transcendental knowledge.”
+        </p>
+        <p class="dedication-author">Founder-Ācārya of the International Society for Krishna Consciousness (ISKCON) &amp; The Bhaktivedanta Book Trust (BBT)</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Site Footer -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <a href="#" class="brand-link" style="justify-content: center;">
+        <img src="images/app_logo.png?v=2" alt="Bhagavad Gita Logo" width="34" height="34" loading="lazy">
+        <span class="brand-title" style="font-size: 17px;">Bhagavad Gita As It Is</span>
+      </a>
+
+      <div class="footer-links">
+        <a href="#experience">App Experience</a>
+        <a href="#features">Features</a>
+        <a href="#download">Direct Download</a>
+        <a href="#faq">FAQ</a>
+        <a href="#dedication">Dedication</a>
+      </div>
+
+      <div class="footer-bottom">
+        <p>18 Chapters • 700 Slokas • 100% Offline • Free &amp; Ad-Free Forever</p>
+        <p style="margin-top: 6px; font-size: 12px; opacity: 0.75;">Om Tat Sat — Dedicated to Sri Krishna and His pure devotees.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/app.js?v=6"></script>
+</body>
+</html>
