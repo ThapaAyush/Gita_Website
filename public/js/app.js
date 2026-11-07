@@ -25,6 +25,7 @@ function initThemeToggle() {
 
   document.documentElement.setAttribute('data-theme', activeTheme);
   updateThemeIcon(activeTheme === 'dark');
+  updateThemeColorMeta(activeTheme === 'dark');
 
   toggleBtn.addEventListener('click', () => {
     const currentTheme = document.documentElement.getAttribute('data-theme') || 'light';
@@ -33,7 +34,15 @@ function initThemeToggle() {
     document.documentElement.setAttribute('data-theme', newTheme);
     localStorage.setItem('gita_site_theme', newTheme);
     updateThemeIcon(newTheme === 'dark');
+    updateThemeColorMeta(newTheme === 'dark');
   });
+}
+
+function updateThemeColorMeta(isDark) {
+  const metaThemeColor = document.getElementById('meta-theme-color');
+  if (metaThemeColor) {
+    metaThemeColor.setAttribute('content', isDark ? '#191813' : '#E4E1B6');
+  }
 }
 
 function updateThemeIcon(isDark) {
@@ -311,9 +320,13 @@ function initScreenshotsGallery() {
     const data = EXPERIENCE_SCREENS[currentIndex];
     if (!data) return;
 
-    // 1. Update Tabs
+    // 1. Update Tabs & scroll active tab into view on mobile
     tabs.forEach(tab => {
-      tab.classList.toggle('active', tab.getAttribute('data-screen') === data.key);
+      const isActive = tab.getAttribute('data-screen') === data.key;
+      tab.classList.toggle('active', isActive);
+      if (isActive && tab.parentElement) {
+        tab.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
+      }
     });
 
     // 2. Update Deck Cards
