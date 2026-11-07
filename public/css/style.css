@@ -81,31 +81,6 @@ html[data-theme="dark"] {
   scrollbar-color: var(--accent-red) var(--bg-page);
 }
 
-@media (prefers-color-scheme: dark) {
-  html:not([data-theme="light"]) {
-    --bg-page: #191813;
-    --bg-page-subtle: #211F18;
-    --bg-card: #27251E;
-    --bg-card-alt: #302E25;
-    --bg-card-subtle: #36342B;
-    --accent-red: #E84D5B;
-    --accent-red-hover: #F2616E;
-    --accent-red-light: rgba(232, 77, 91, 0.18);
-    --accent-gold: #DFB468;
-    --accent-gold-hover: #E8C37E;
-    --accent-gold-soft: rgba(223, 180, 104, 0.16);
-    --accent-gold-glow: rgba(223, 180, 104, 0.35);
-    --accent-emerald: #38D46A;
-    --accent-emerald-soft: rgba(56, 212, 106, 0.16);
-    --text-primary: #EDE9D0;
-    --text-secondary: #A8A38E;
-    --text-muted: #827E6A;
-    --border-color: #3B392F;
-    --border-color-dark: #4D4A3E;
-    --border-highlight: #E84D5B;
-  }
-}
-
 /* ==========================================================================
    Base Reset & Typography Directives
    ========================================================================== */

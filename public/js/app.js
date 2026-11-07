@@ -13,36 +13,26 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 /* -------------------------------------------------------------------------
-   1. Theme Toggle (Light / Dark Mode)
+   1. Theme Toggle (Default Setting: Always Light Mode)
    ------------------------------------------------------------------------- */
 function initThemeToggle() {
   const toggleBtn = document.getElementById('theme-toggle-btn');
   if (!toggleBtn) return;
 
+  // The website opens in Light Mode by default unless the visitor explicitly saved dark mode
   const savedTheme = localStorage.getItem('gita_site_theme');
-  const prefersDark = window.matchMedia('(prefers-color-scheme: dark)');
+  const activeTheme = savedTheme === 'dark' ? 'dark' : 'light';
 
-  if (savedTheme) {
-    document.documentElement.setAttribute('data-theme', savedTheme);
-    updateThemeIcon(savedTheme === 'dark');
-  } else {
-    updateThemeIcon(prefersDark.matches);
-  }
+  document.documentElement.setAttribute('data-theme', activeTheme);
+  updateThemeIcon(activeTheme === 'dark');
 
   toggleBtn.addEventListener('click', () => {
-    const currentTheme = document.documentElement.getAttribute('data-theme') || 
-      (prefersDark.matches ? 'dark' : 'light');
+    const currentTheme = document.documentElement.getAttribute('data-theme') || 'light';
     const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
 
     document.documentElement.setAttribute('data-theme', newTheme);
     localStorage.setItem('gita_site_theme', newTheme);
     updateThemeIcon(newTheme === 'dark');
-  });
-
-  prefersDark.addEventListener('change', (e) => {
-    if (!localStorage.getItem('gita_site_theme')) {
-      updateThemeIcon(e.matches);
-    }
   });
 }
 
