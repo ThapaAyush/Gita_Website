@@ -12,12 +12,13 @@ A responsive, authentic landing page and high-performance distribution server fo
 
 - **Devotional Aesthetic Matching the App**: Styled with sacred warm parchment (`#F7F4EB`), sacred crimson accents (`#8B1E1E`), Sanskrit gold (`#B8860B`), and Georgia serif typography.
 - **Light & Dark Theme Toggle**: Built-in support for light parchment and night dark modes, respecting user system preferences with instant manual override.
-- **Interactive Screenshot Showcase**: Interactive gallery with device mockups and tabs showcasing all 5 primary app screens:
-  1. **Sacred Verse Reader** (`screen_reader.png`) — Devanagari Sanskrit, diacritics, word-by-word synonyms, translation & purports.
-  2. **Chapters Hub & Progress** (`screen_home.png`) — All 18 chapters with 700 slokas and instant progress resume.
-  3. **Aesthetic Customization** (`screen_settings.png`) — Text size scaler and 4 background themes (Parchment, Sepia, Paper, Dark).
-  4. **Sacred Dedication** (`screen_about.png`) — Homage to Founder-Acharya A.C. Bhaktivedanta Swami Srila Prabhupada.
-  5. **Intelligent Scripture Search** (`screen_search.png`) — Coordinate search (e.g. `1.1`), Devanagari, and phonetic Roman transliteration.
+- **Interactive Screenshot Showcase**: Interactive gallery with device mockups and tabs showcasing all 6 primary app screens:
+  1. **Sacred Opening Gateway** (`screen_opening.png`) — Consecrated scripture emblem, title inscription, Vedic motifs & Prabhupada dedication.
+  2. **Sacred Verse Reader** (`screen_reader.png`) — Devanagari Sanskrit, diacritics, word-by-word synonyms, translation & purports.
+  3. **Chapters Hub & Progress** (`screen_home.png`) — All 18 chapters with 700 slokas and instant progress resume.
+  4. **Aesthetic Customization** (`screen_settings.png`) — Text size scaler and 4 background themes (Parchment, Sepia, Paper, Dark).
+  5. **Sacred Dedication** (`screen_about.png`) — Homage to Founder-Acharya A.C. Bhaktivedanta Swami Srila Prabhupada.
+  6. **Intelligent Scripture Search** (`screen_search.png`) — Coordinate search (e.g. `1.1`), Devanagari, and phonetic Roman transliteration.
 - **Direct APK Distribution**:
   - One-click download button (`/download`) with dynamic file size, versioning, and download counter.
   - Supports HTTP Range requests for resumable downloads on mobile networks.
@@ -81,6 +82,7 @@ Gita_website/
     │   └── app.js                 # Screenshot switcher, theme toggle & API client
     ├── images/
     │   ├── app_logo.png           # High-resolution official scripture emblem
+    │   ├── screen_opening.png     # Opening page view screenshot
     │   ├── screen_reader.png      # Verse reader view screenshot
     │   ├── screen_home.png        # Chapters hub view screenshot
     │   ├── screen_settings.png    # Reading preferences view screenshot

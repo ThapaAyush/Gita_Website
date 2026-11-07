@@ -953,12 +953,12 @@ html[data-theme="dark"] .device-mockup-frame {
   transform: scale(1.08);
 }
 
-/* 5-Card Thumbnail Deck Grid */
+/* 6-Card Thumbnail Deck Grid */
 .screens-deck-grid {
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  gap: 18px;
-  max-width: 1080px;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 14px;
+  max-width: 1160px;
   margin: 0 auto;
 }
 

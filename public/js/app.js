@@ -209,13 +209,27 @@ function initHeroPhoneSlideshow() {
 }
 
 /* -------------------------------------------------------------------------
-   3. Interactive App Experience Showcase (5 Authentic Screens)
+   3. Interactive App Experience Showcase (6 Authentic Screens)
    ------------------------------------------------------------------------- */
 const EXPERIENCE_SCREENS = [
   {
-    key: 'reader',
+    key: 'opening',
     num: '01',
-    badge: 'SCREEN 01 • SACRED IMMERSION',
+    badge: 'SCREEN 01 • SACRED WELCOME',
+    title: 'Sacred Opening Gateway',
+    image: 'images/screen_opening.png?v=1',
+    desc: 'The official sacred gateway to Bhagavad-gītā As It Is. Featuring the consecrated emblem, timeless title inscription, traditional Vedic ornamental motifs, and sacred dedication to Founder-Acharya A.C. Bhaktivedanta Swami Srila Prabhupada.',
+    bullets: [
+      'Official consecrated scripture emblem in sacred crimson',
+      'Timeless scripture title and philosophical invocation',
+      'Traditional Vedic ornamental divider motif',
+      'Sacred dedication to Founder-Acharya Srila Prabhupada'
+    ]
+  },
+  {
+    key: 'reader',
+    num: '02',
+    badge: 'SCREEN 02 • SACRED IMMERSION',
     title: 'Verse Reader Experience',
     image: 'images/screen_reader.png?v=5',
     desc: 'Immerse yourself in original Sanskrit Devanagari script, Roman diacritical transliterations, word-for-word synonyms, and the complete 1972 purports by Srila Prabhupada. Navigate effortlessly with bottom quick-action controls.',
@@ -228,8 +242,8 @@ const EXPERIENCE_SCREENS = [
   },
   {
     key: 'home',
-    num: '02',
-    badge: 'SCREEN 02 • SCRIPTURE NAVIGATION',
+    num: '03',
+    badge: 'SCREEN 03 • SCRIPTURE NAVIGATION',
     title: '18 Canonical Chapters Hub',
     image: 'images/screen_home.png?v=5',
     desc: 'Browse the complete index of all 18 chapters with their traditional Sanskrit titles, English translations, and exact verse totals. Resume your reading journey instantly with the prominent "Continue" card.',
@@ -242,8 +256,8 @@ const EXPERIENCE_SCREENS = [
   },
   {
     key: 'settings',
-    num: '03',
-    badge: 'SCREEN 03 • VISUAL AESTHETICS',
+    num: '04',
+    badge: 'SCREEN 04 • VISUAL AESTHETICS',
     title: 'Reading Themes & Typography',
     image: 'images/screen_settings.png?v=5',
     desc: 'Customize your spiritual reading sanctuary for day or night. Slide font size dynamically from 12pt to 28pt with live preview sloka, choose between 4 background aesthetics, and toggle dark mode.',
@@ -256,8 +270,8 @@ const EXPERIENCE_SCREENS = [
   },
   {
     key: 'about',
-    num: '04',
-    badge: 'SCREEN 04 • AUTHORIZED TRADITION',
+    num: '05',
+    badge: 'SCREEN 05 • AUTHORIZED TRADITION',
     title: 'Sacred Dedication & Lineage',
     image: 'images/screen_about.png?v=5',
     desc: 'Learn about the unbroken disciplic succession (parampara) through which the Gita is preserved. Read the sacred dedication to Founder-Acharya A.C. Bhaktivedanta Swami Prabhupada and verify canonical statistics.',
@@ -270,8 +284,8 @@ const EXPERIENCE_SCREENS = [
   },
   {
     key: 'search',
-    num: '05',
-    badge: 'SCREEN 05 • RAPID FINDER',
+    num: '06',
+    badge: 'SCREEN 06 • RAPID FINDER',
     title: 'Intelligent Scripture Search',
     image: 'images/screen_search.png?v=5',
     desc: 'Find any sloka instantly across the entire scripture. Jump directly by chapter and verse coordinate (e.g. 1.1 or 4.7) or search phonetically without requiring complex diacritical keyboards.',
