@@ -900,6 +900,124 @@ html[data-theme="dark"] .device-mockup-frame {
   flex-wrap: wrap;
 }
 
+/* Dual Platform Spotlight Download Buttons */
+.spotlight-download-group {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.spotlight-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 18px;
+  border-radius: var(--radius-full);
+  text-decoration: none;
+  font-family: var(--font-sans);
+  transition: all 0.28s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: var(--shadow-sm);
+  position: relative;
+  cursor: pointer;
+  border: 1.5px solid transparent;
+}
+
+.spotlight-btn-android {
+  background: linear-gradient(135deg, var(--accent-red) 0%, #8A151E 100%);
+  color: #FFFFFF !important;
+  border-color: rgba(255, 255, 255, 0.18);
+}
+
+.spotlight-btn-android:hover {
+  background: linear-gradient(135deg, #C92430 0%, var(--accent-red) 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 22px rgba(181, 31, 42, 0.38);
+  color: #FFFFFF !important;
+}
+
+.spotlight-btn-ios {
+  background: var(--bg-card);
+  color: var(--text-primary) !important;
+  border-color: var(--border-color);
+}
+
+.spotlight-btn-ios:hover {
+  background: var(--bg-card-alt);
+  border-color: var(--accent-gold);
+  color: var(--text-primary) !important;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 22px rgba(122, 74, 8, 0.18);
+}
+
+.spotlight-btn-icon {
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+}
+
+.spotlight-btn-content {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.25;
+  text-align: left;
+}
+
+.spotlight-btn-title {
+  font-size: 13.5px;
+  font-weight: 700;
+  letter-spacing: 0.2px;
+}
+
+.spotlight-btn-android .spotlight-btn-title {
+  color: #FFFFFF;
+}
+
+.spotlight-btn-ios .spotlight-btn-title {
+  color: var(--text-primary);
+}
+
+.spotlight-btn-sub {
+  font-size: 10.5px;
+  font-weight: 500;
+  opacity: 0.88;
+}
+
+.spotlight-btn-android .spotlight-btn-sub {
+  color: #F8E2E4;
+}
+
+.spotlight-btn-ios .spotlight-btn-sub {
+  color: var(--text-secondary);
+}
+
+.spotlight-btn-arrow {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  font-size: 12px;
+  font-weight: bold;
+  transition: transform 0.2s ease;
+  flex-shrink: 0;
+}
+
+.spotlight-btn-android .spotlight-btn-arrow {
+  background: rgba(255, 255, 255, 0.22);
+  color: #FFFFFF;
+}
+
+.spotlight-btn-ios .spotlight-btn-arrow {
+  background: var(--accent-gold-soft);
+  color: var(--accent-gold);
+}
+
+.spotlight-btn:hover .spotlight-btn-arrow {
+  transform: translateY(2px);
+}
+
 .spotlight-nav-arrows {
   display: flex;
   align-items: center;
